@@ -1,0 +1,476 @@
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+#screen-1 {
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-items: center;
+}
+
+.home-page {
+  background-image: url("/images/cover-image2.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#start-button {
+  width: 10vw;
+  height: 3vw;
+  border-radius: 10px;
+  font-family: "Luckiest Guy";
+  font-size: 1.5vw;
+  background-image: linear-gradient(to bottom, #c9b2e0, #d70cf1);
+  color: white;
+  cursor: pointer;
+}
+
+select {
+  margin-top: 2vw;
+  width: 25vw;
+  height: 2vw;
+  background-image: linear-gradient(to bottom, #c9b2e0, #45008c);
+  border-radius: 5px;
+  color: white;
+  font-size: 1vw;
+  cursor: pointer;
+}
+
+option {
+  color: black;
+  background-color: #c9b2e0;
+}
+
+#screen-2 {
+  height: 100%;
+  background-color: black;
+  display: none;
+  justify-items: center;
+}
+
+#game-page {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/AuTown.png");
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+#high-score-div {
+  position: absolute;
+  font-family: "Luckiest Guy", cursive;
+  top: 1vw;
+  right: 1vw;
+  font-size: 1vw;
+  color: #ce7090;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#high-score {
+  font-family: "Fredoka One", cursive;
+  margin-left: 2vw;
+  font-size: 2vw;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33vw;
+  position: absolute;
+  bottom: 30vh;
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.upper-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+
+.grade {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 2.5vw;
+  color: darkred;
+  display: flex;
+  width: 50%;
+  justify-self: end;
+  align-self: middle;
+  justify-content: flex-end;
+  padding: 0 5% 0 0;
+}
+
+@keyframes fadeoutgrade {
+  from {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.level {
+  display: flex;
+  justify-self: flex-start;
+  width: 50%;
+  font-family: "Luckiest Guy", cursive;
+  color: white;
+  font-size: 1.2vw;
+  align-items: center;
+  padding: 0 0 0 5%;
+}
+
+.level-number {
+  display: flex;
+  font-family: "Luckiest Guy", cursive;
+  color: orange;
+  margin-left: 5px;
+  font-size: 1.8vw;
+  padding-left: 5px;
+}
+
+#finish-move {
+  font-family: "Road Rage", cursive;
+  font-size: 2vw;
+  color: rgb(0, 247, 255);
+}
+
+.rhythm-bar {
+  display: flex;
+  border-radius: 50px;
+  border: grey 1px solid;
+  width: 40%;
+  height: 1vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  position: relative;
+  align-self: center;
+}
+
+.target {
+  border-radius: 50%;
+  border: 0.5px solid white;
+  background-color: red;
+  box-shadow: white;
+  width: 1vw;
+  height: 1vw;
+}
+
+.target-move {
+  left: 0px;
+  animation: move 2s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(33vw * 0.4 - 1vw));
+  }
+}
+
+.target-area {
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.3),
+    #5ec7c3,
+    white,
+    white,
+    #5ec7c3,
+    rgba(0, 0, 0, 0.3)
+  );
+  opacity: 1;
+  width: 30%;
+  height: 1vw;
+  position: absolute;
+  right: 10%;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.arrow-keys {
+  display: flex;
+  border-radius: 50px;
+  border: grey 1px solid;
+  width: 100%;
+  height: 4vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  display: flex;
+  border-radius: 50%;
+  border-color: #1f1a93;
+  width: 3.5vw;
+  height: 3.5vw;
+  max-height: 4vw;
+  background-image: linear-gradient(to bottom, #1f1a93, #45d0fd);
+  margin: 1.5px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3vw;
+}
+
+.chance-key {
+  display: flex;
+  border-radius: 50%;
+  width: 3.5vw;
+  height: 3.5vw;
+  max-height: 4vw;
+  background-image: linear-gradient(to bottom, red, #ff4b4b);
+  margin: 1.5px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3vw;
+}
+
+.pressed-key {
+  display: flex;
+  border-radius: 50%;
+  width: 3.5vw;
+  height: 3.5vw;
+  max-height: 4vw;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(92, 165, 23),
+    rgb(217, 255, 0)
+  );
+  margin: 1.5px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 3vw;
+}
+
+#chance {
+  display: flex;
+  border-radius: 50%;
+  width: 3.5vw;
+  height: 3.5vw;
+  background-color: rgb(28, 219, 44);
+  justify-content: center;
+  align-items: center;
+  border-style: double;
+  position: absolute;
+  bottom: 30vh;
+  right: 29vw;
+  font-size: 1.5vw;
+  font-family: "Fredoka One", cursive;
+}
+
+.score {
+  width: 16vw;
+  height: 3.5vw;
+  border: 1px black solid;
+  position: absolute;
+  right: 1vw;
+  bottom: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: hsl(48deg 59% 50%);
+  font-size: 2vw;
+  padding-right: 10px;
+  font-family: "Fredoka One", cursive;
+}
+
+.timer {
+  width: 10vw;
+  height: 3vw;
+  border: 2px white solid;
+  border-radius: 10px;
+  background-color: black;
+  opacity: 0.6;
+  position: absolute;
+  left: 1vw;
+  bottom: 3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
+}
+
+#time {
+  font-size: 1vw;
+}
+
+#song-progress {
+  display: flex;
+  border-radius: 50px;
+  border: black 1px solid;
+  width: 90%;
+  height: 1vw;
+  background-color: hsl(48deg 59% 50%);
+  align-items: center;
+  position: relative;
+  align-self: center;
+}
+
+#progress-indicator {
+  border-radius: 50%;
+  border: 0.5px solid white;
+  background-color: #45008c;
+  width: 1vw;
+  height: 1vw;
+}
+
+@keyframes time {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(10vw * 0.9 - 1vw - 1px));
+  }
+}
+
+table,
+tr {
+  padding: 2px;
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+}
+
+#scoreboard-div {
+  display: flex;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.scoreboard {
+  width: 60vw;
+}
+
+#header-row {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#data-row {
+  background-color: rgba(37, 171, 175, 0.6);
+}
+
+th {
+  color: white;
+  width: 7vh;
+}
+
+td {
+  color: white;
+  width: 7vh;
+  height: 7vh;
+  padding: none;
+}
+
+#data-div {
+  display: flex;
+  background-color: rgb(25 39 40);
+  border-radius: 50%;
+  height: 7vh;
+  width: 7vh;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.ending-page {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 33vh;
+}
+
+#retry {
+  border-radius: 20px;
+  background-color: #788be0;
+  width: 8vw;
+  height: 5vh;
+  font-size: 1vw;
+  font-weight: bold;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  animation: fadein 1s 1;
+  cursor: pointer;
+  color: white;
+}
+
+#perfect {
+  color: rgb(212, 71, 255);
+}
+
+#great {
+  color: rgb(0, 255, 21);
+}
+
+#cool {
+  color: rgb(0, 255, 255);
+}
+
+#bad {
+  color: rgb(245, 32, 139);
+}
+
+#miss {
+  color: rgb(255, 0, 0);
+}
