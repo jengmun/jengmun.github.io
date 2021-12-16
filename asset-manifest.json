@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dota2/static/css/main.2f6af748.chunk.css",
+    "main.js": "/dota2/static/js/main.b7f1aa32.chunk.js",
+    "main.js.map": "/dota2/static/js/main.b7f1aa32.chunk.js.map",
+    "runtime-main.js": "/dota2/static/js/runtime-main.501710ef.js",
+    "runtime-main.js.map": "/dota2/static/js/runtime-main.501710ef.js.map",
+    "static/js/2.59464b94.chunk.js": "/dota2/static/js/2.59464b94.chunk.js",
+    "static/js/2.59464b94.chunk.js.map": "/dota2/static/js/2.59464b94.chunk.js.map",
+    "index.html": "/dota2/index.html",
+    "static/css/main.2f6af748.chunk.css.map": "/dota2/static/css/main.2f6af748.chunk.css.map",
+    "static/js/2.59464b94.chunk.js.LICENSE.txt": "/dota2/static/js/2.59464b94.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/dota2/static/media/TrajanBold.93c93544.ttf",
+    "static/media/Bookmarks.module.css": "/dota2/static/media/bookmarks.3d6c5830.jpg",
+    "static/media/loading-spinner.0a343b8a.png": "/dota2/static/media/loading-spinner.0a343b8a.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.501710ef.js",
+    "static/js/2.59464b94.chunk.js",
+    "static/css/main.2f6af748.chunk.css",
+    "static/js/main.b7f1aa32.chunk.js"
+  ]
+}
