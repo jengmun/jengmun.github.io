@@ -1,0 +1,132 @@
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0 10px 0;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  font-size: 20px;
+  font-family: "Albertus Nova";
+  text-transform: uppercase;
+  padding-left: 50px;
+  flex-wrap: wrap;
+}
+
+.nav > ul {
+  letter-spacing: 3px;
+}
+
+.nav li {
+  padding: 0;
+  padding-right: 50px;
+  margin: 0;
+}
+
+.nav a {
+  color: #9c9592;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.nav img {
+  display: flex;
+  height: 40px;
+  margin-left: 20px;
+}
+
+.nav a:hover,
+.nav img:hover {
+  opacity: 1;
+}
+
+.nav .active {
+  opacity: 1;
+  border-bottom: solid 3px #ff6046;
+}
+
+.search {
+  width: 15vw;
+  max-width: 200px;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.search input {
+  width: 100%;
+  min-width: 60px;
+  height: 25px;
+  background-color: rgb(32, 32, 32);
+  margin: 0;
+  border: none;
+  padding: 2px 2px 2px 4px;
+  font-size: 15px;
+  color: #9c9592;
+  border-radius: 5px;
+}
+
+.search ul {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 15vw;
+  max-width: 200px;
+  max-height: 50vh;
+  padding: 0 2px;
+  margin: 1px;
+  list-style-type: none;
+  background-color: rgba(30, 30, 30, 0.9);
+  font-size: 20px;
+  z-index: 1;
+  position: absolute;
+  overflow: scroll;
+  word-wrap: break-word;
+  flex-wrap: nowrap;
+  color: #9c9592;
+}
+
+.search li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  text-transform: none;
+  font-family: Charlotte;
+}
+
+.search ul::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+}
+
+.search ul::-webkit-scrollbar-thumb {
+  background-color: rgb(56, 55, 55);
+}
+
+.search ul::-webkit-scrollbar-track {
+  background-color: grey;
+}
+
+.search li:hover {
+  background-color: rgba(80, 80, 80, 0.8);
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search a {
+  color: white;
+}
+
+.search input:focus + ul,
+.search ul:hover {
+  display: flex;
+}

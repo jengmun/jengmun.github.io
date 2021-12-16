@@ -1,0 +1,74 @@
+.container {
+  width: 100vw;
+}
+
+.container table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container tr {
+  width: 80%;
+  min-width: 600px;
+  display: flex;
+}
+
+.container th,
+td {
+  width: 25%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.container th {
+  text-transform: uppercase;
+  border-bottom: 1px solid #ff6046;
+  position: relative;
+}
+
+.container td {
+  display: block;
+  font-family: "Charlotte";
+  font-weight: normal;
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 50px;
+  animation: fadein 1s 1;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container img {
+  width: 60px;
+  position: absolute;
+  bottom: 20px;
+  margin: 5px;
+}
+
+.row {
+  transition: transform 0.5s;
+  margin: 1px;
+}
+
+.row:hover {
+  background-image: url("https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/backgrounds/greyfade.jpg");
+  background-size: cover;
+  transform: scale(1.1);
+}

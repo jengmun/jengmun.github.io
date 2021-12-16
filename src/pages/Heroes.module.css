@@ -1,0 +1,40 @@
+.heroes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 1350px;
+  justify-content: center;
+  animation: fadein 1s 1;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.heroes input {
+  width: 150px;
+  height: 20px;
+  background-color: rgb(32, 32, 32);
+  margin: 10px;
+  border: none;
+  padding: 2px 2px 2px 4px;
+  font-size: 15px;
+  color: #9c9592;
+  border-radius: 5px;
+}
+
+.heroes input:focus {
+  outline: none;
+}
